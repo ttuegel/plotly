@@ -177,7 +177,7 @@ gg2list <- function(p, width = NULL, height = NULL,
   rStudioDevSize <- if (is_rstudio()) grDevices::dev.size("px")
   
   if (is.null(grDevices::dev.list())) {
-    dev_fun <- if (system.file(package = "Cairo") != "") {
+    dev_fun <- if (system.file(package = Cairo) != "") {
       Cairo::Cairo
     } else if (capabilities("png")) {
       grDevices::png
