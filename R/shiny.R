@@ -27,7 +27,7 @@ plotlyOutput <- function(outputId, width = "100%", height = "400px",
     width = width, 
     height = height, 
     inline = inline, 
-    package = "plotly"
+    package = plotly
   )
 }
 
