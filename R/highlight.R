@@ -211,5 +211,5 @@ colourPickerLib <- function() {
 }
 
 depPath <- function(...) {
-  system.file('htmlwidgets', 'lib', ..., package = 'plotly')
+  system.file('htmlwidgets', 'lib', ..., package = plotly)
 }
