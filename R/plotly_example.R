@@ -16,14 +16,14 @@ plotly_example <- function(type = c("demo", "shiny", "rmd"), name, ...) {
   # demos don't necessarily need a name
   if (type == "demo") {
     if (missing(name)) {
-      return(utils::demo(package = "plotly")) 
+      return(utils::demo(package = plotly)) 
     } else  {
-      return(utils::demo(topic = name, package = "plotly"))
+      return(utils::demo(topic = name, package = plotly))
     }
   }
   
   # check to make sure the example exists
-  exampleDir <- system.file("examples", type, package = "plotly")
+  exampleDir <- system.file("examples", type, package = plotly)
   nms <- basename(list.dirs(exampleDir, recursive = FALSE))
   if (missing(name) || !isTRUE(name %in% nms)) {
     message(
@@ -35,7 +35,7 @@ plotly_example <- function(type = c("demo", "shiny", "rmd"), name, ...) {
     return(invisible())
   }
   
-  finalDir <- system.file("examples", type, name, package = "plotly")
+  finalDir <- system.file("examples", type, name, package = plotly)
   
   if (type == "shiny") {
     try_library("shiny", "plotly_example")
